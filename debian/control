@@ -1,0 +1,24 @@
+Source: psortb
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Uploaders: Andreas Tille <tille@debian.org>
+Section: science
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               bioperl,
+               ncbi-blast+-legacy
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-med/psortb.git
+Vcs-Git: https://anonscm.debian.org/git/debian-med/psortb.git
+Homepage: http://www.psort.org/
+
+Package: psortb
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${perl:Depends},
+         ${misc:Depends}
+Description: bacterial localization prediction tool
+ PSORTb enables prediction of bacterial protein subcellular localization
+ (SCL) and provides a quick and inexpensive means for gaining insight
+ into protein function, verifying experimental results, annotating newly
+ sequenced bacterial genomes, detecting potential cell surface/secreted
+ drug targets, as well as identifying biomarkers for microbes.

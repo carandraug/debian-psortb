@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: PSORTb:
+Source: http://www.psort.org/downloads
+Comment: **** Before manually editing this file you should give ****
+           scan-copyrights
+         **** available in cme + lib-config-model-dpkg-perl     ****
+         **** package a try.  For existing copyright files try  ****
+           cme update dpkg-copyright
+
+Files: *
+Copyright: © 20xx-20yy <upstream>
+License: <license>
+
+Files: debian/*
+Copyright: © 2017 maintainername <maintainer@e.mail>
+License: <license>

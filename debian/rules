@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+# DH_VERBOSE := 1
+export LC_ALL=C.UTF-8
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+	if [ -x psort/bin/psort.debsave ] ; then
+	    mv psort/bin/psort.debsave psort/bin/psort
+	fi
+
+override_dh_auto_configure:
+	cp -a psort/bin/psort psort/bin/psort.debsave
+	dh_auto_configure

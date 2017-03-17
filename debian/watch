@@ -1,0 +1,3 @@
+version=4
+
+http://www.psort.org/downloads .*/bio-tools-psort-all.(\d[.\d]+)\.tar\.gz
