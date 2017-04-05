@@ -1,0 +1,15 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Fri, 17 Mar 2017 10:23:15 +010
+Description: Include header files provided by libsquid-dev
+
+--- a/algorithm-hmm/Makefile.PL
++++ b/algorithm-hmm/Makefile.PL
+@@ -33,7 +33,7 @@ WriteMakefile('NAME'          => 'Algori
+ 	      'LIBS'          => $libpath,
+ 	      'CC'            => $CC,
+ 	      'LD'            => '$(CC)',
+-	      'INC'           => '-Isrc/include',
++	      'INC'           => '-Isrc/include `pkg-config --cflags libsquid`',
+ 	      'OBJECT'        => "HMM.o hmm-binding.o",
+ 	      'XSOPT'         => '-C++',
+ 	      );
