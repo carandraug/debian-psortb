@@ -1,6 +1,14 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: PSORTb:
 Source: http://www.psort.org/downloads
+Files-Excluded: algorithm-hmm/src/include/gki.h
+                algorithm-hmm/src/include/msa.h
+                algorithm-hmm/src/include/rk.h
+                algorithm-hmm/src/include/sqfuncs.h
+                algorithm-hmm/src/include/squidconf.h
+                algorithm-hmm/src/include/squid.h
+                algorithm-hmm/src/include/ssi.h
+                algorithm-hmm/src/include/stopwatch.h
 
 Files: *
 Copyright: 2003-2010 Nancy Y. Yu, James R. Wagner, Matthew R. Laird,

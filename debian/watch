@@ -1,3 +1,4 @@
 version=4
 
-http://www.psort.org/downloads .*/bio-tools-psort-all.(\d[.\d]+)\.tar\.gz
+opts="repacksuffix=+dfsg,dversionmangle=s/\+dfsg//g,repack,compression=xz" \
+  http://www.psort.org/downloads .*/bio-tools-psort-all.(\d[.\d]+)\.tar\.gz
