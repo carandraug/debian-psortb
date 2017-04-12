@@ -1,0 +1,20 @@
+--- a/algorithm-hmm/hmm-binding.cpp
++++ b/algorithm-hmm/hmm-binding.cpp
+@@ -71,7 +71,7 @@ int HMM::load(char *filename) {
+   if(strlen(filename) == 0) return -1;
+ 
+   // Load the model from the specified file.
+-  if((hmmfp = HMMFileOpen(filename, "HMMERDB")) == NULL) return -1;
++  if((hmmfp = HMMFileOpen(filename, (char *)"HMMERDB")) == NULL) return -1;
+ 
+   if(! HMMFileRead(hmmfp, &tmp_model)) {
+     HMMFileClose(hmmfp);
+@@ -107,7 +107,7 @@ HMMReport *HMM::search(char *seq) {
+   if((model == NULL) ||(seq == NULL) || (!(seqlen = strlen(seq)))) return NULL;
+ 
+   // Convert the sequence to the format the HMMER library expects.
+-  dseq = DigitizeSequence(seq, seqlen);
++  dseq = DigitizeSequence((char *)seq, seqlen);
+ 
+   // Calculate the raw scores for the sequence.
+   if (P7ViterbiSize(seqlen, model->M) <= RAMLIMIT)

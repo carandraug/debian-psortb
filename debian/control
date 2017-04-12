@@ -6,7 +6,7 @@ Priority: optional
 Build-Depends: debhelper (>= 10),
                bioperl,
                ncbi-blast+-legacy,
-               libsquid-dev,
+               libsquid-dev (>= 1.9g+cvs20050121-9~),
                libhmmer2-dev,
                pkg-config
 Standards-Version: 3.9.8
