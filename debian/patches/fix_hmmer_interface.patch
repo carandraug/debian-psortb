@@ -9,7 +9,21 @@
  
    if(! HMMFileRead(hmmfp, &tmp_model)) {
      HMMFileClose(hmmfp);
-@@ -107,7 +107,7 @@ HMMReport *HMM::search(char *seq) {
+@@ -95,25 +95,26 @@ int HMM::load(char *filename) {
+ 
+ HMMReport *HMM::search(char *seq) {
+   struct tophit_s *ghit, *dhit;
++  struct dpmatrix_s *mx;
+   struct p7trace_s *trace;
+   double pvalue, evalue;
+   int numhits;
+   HMMReport *hmmrep;
+   float score;
+   int seqlen;
+-  char *dseq;
++  unsigned char *dseq;
+ 
+   // Ensure we have a valid model and sequence.
    if((model == NULL) ||(seq == NULL) || (!(seqlen = strlen(seq)))) return NULL;
  
    // Convert the sequence to the format the HMMER library expects.
@@ -18,3 +32,11 @@
  
    // Calculate the raw scores for the sequence.
    if (P7ViterbiSize(seqlen, model->M) <= RAMLIMIT)
+-    score = P7Viterbi(dseq, seqlen, model, &trace);
++    score = P7Viterbi(dseq, seqlen, model, mx, &trace);
+   else
+-    score = P7SmallViterbi(dseq, seqlen, model, &trace);
++    score = P7SmallViterbi(dseq, seqlen, model, mx, &trace);
+ 
+ 
+   // Calculate the score using the forward algorithm if we need.
