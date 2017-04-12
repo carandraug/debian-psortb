@@ -9,7 +9,7 @@ Description: Include header files provided by libsquid-dev
  	      'CC'            => $CC,
  	      'LD'            => '$(CC)',
 -	      'INC'           => '-Isrc/include',
-+	      'INC'           => '-Isrc/include `pkg-config --cflags libsquid`',
++	      'INC'           => '-Isrc/include `pkg-config --cflags libsquid` `pkg-config --cflags libhmmer2`',
  	      'OBJECT'        => "HMM.o hmm-binding.o",
  	      'XSOPT'         => '-C++',
  	      );
