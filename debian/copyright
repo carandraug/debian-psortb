@@ -9,6 +9,12 @@ Files-Excluded: algorithm-hmm/src/include/gki.h
                 algorithm-hmm/src/include/squid.h
                 algorithm-hmm/src/include/ssi.h
                 algorithm-hmm/src/include/stopwatch.h
+                algorithm-hmm/src/include/config.h
+                algorithm-hmm/src/include/funcs.h
+                algorithm-hmm/src/include/globals.h
+                algorithm-hmm/src/include/postprob.h
+                algorithm-hmm/src/include/structs.h
+                algorithm-hmm/src/include/gsi*.h
 
 Files: *
 Copyright: 2003-2010 Nancy Y. Yu, James R. Wagner, Matthew R. Laird,
