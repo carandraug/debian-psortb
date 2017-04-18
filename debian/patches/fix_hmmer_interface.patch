@@ -40,3 +40,12 @@
  
  
    // Calculate the score using the forward algorithm if we need.
+@@ -241,7 +242,7 @@ void HMM::init(char *filename, int df, i
+   thresh.globT   = -FLT_MAX;
+   thresh.domT    = -FLT_MAX;
+   thresh.domE    = FLT_MAX;
+-  thresh.autocut = CUT_NONE;
++  thresh.autocut = threshold_s::CUT_NONE;
+   thresh.Z       = 1;
+ 
+   doForward = df;
