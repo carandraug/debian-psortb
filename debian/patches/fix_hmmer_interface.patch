@@ -1,3 +1,8 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Fri, 17 Mar 2017 10:23:15 +010
+Description: Enable linking against libhmmer.a as packaged
+ in hmmer2 source package
+
 --- a/algorithm-hmm/hmm-binding.cpp
 +++ b/algorithm-hmm/hmm-binding.cpp
 @@ -71,7 +71,7 @@ int HMM::load(char *filename) {

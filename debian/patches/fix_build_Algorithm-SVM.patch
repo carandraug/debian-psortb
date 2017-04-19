@@ -1,0 +1,20 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Fri, 17 Mar 2017 10:23:15 +010
+Origin: https://rt.cpan.org/Public/Bug/Display.html?id=79754
+Description: Fix Build of code copy of Algorithm-SVM
+
+--- a/bio-tools-psort-svmloc/Makefile.PL
++++ b/bio-tools-psort-svmloc/Makefile.PL
+@@ -1,10 +1,11 @@
+ use ExtUtils::MakeMaker;
++use Config;
+ use lib '../lib';
+ use Bio::Tools::PSort::Install;
+ 
+ $CC = 'g++';
+ 
+-%args = ();
++%args = ('CCFLAGS' => "-Wall $Config{ccflags}");
+ 
+ @libs = qw/svmloc/;
+ %paths = ();
