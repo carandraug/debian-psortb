@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 10),
                bioperl,
                ncbi-blast+-legacy,
                libsquid-dev (>= 1.9g+cvs20050121-9~),
-               libhmmer2-dev,
+               libhmmer2-dev (>= 2.3.2+dfsg-2~),
                pkg-config
 Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-med/psortb.git
