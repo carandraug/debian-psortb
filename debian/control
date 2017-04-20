@@ -4,6 +4,7 @@ Uploaders: Andreas Tille <tille@debian.org>
 Section: science
 Priority: optional
 Build-Depends: debhelper (>= 10),
+               libsvm-dev,
                bioperl,
                ncbi-blast+-legacy,
                libsquid-dev (>= 1.9g+cvs20050121-9~),
