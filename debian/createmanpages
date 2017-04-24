@@ -1,0 +1,22 @@
+#!/bin/sh
+MANDIR=debian
+mkdir -p $MANDIR
+
+VERSION=`dpkg-parsechangelog | awk '/^Version:/ {print $2}' | sed -e 's/^[0-9]*://' -e 's/-.*//' -e 's/[+~]dfsg$//'`
+
+AUTHOR=".SH AUTHOR\nThis manpage was written by $DEBFULLNAME for the Debian distribution and
+can be used for any other usage of the program.
+"
+
+progname=psort
+help2man --no-info --no-discard-stderr --help-option=" " \
+         --name='bacterial localization prediction tool' \
+            --version-string="$VERSION" ${progname} > $MANDIR/${progname}.1
+echo $AUTHOR >> $MANDIR/${progname}.1
+
+cat <<EOT
+Please enhance the help2man output.
+The following web page might be helpful in doing so:
+    http://liw.fi/manpages/
+EOT
+
