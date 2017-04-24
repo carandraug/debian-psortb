@@ -1,7 +1,5 @@
 psortb (3.0.4+dfsg-1) UNRELEASED; urgency=medium
 
   * Initial release (Closes: #<bug>)
-    TraceScoreCorrection is part of hmmer2 package.  This needs to be
-    turned into a library
 
  -- Andreas Tille <tille@debian.org>  Fri, 17 Mar 2017 10:23:15 +0100
