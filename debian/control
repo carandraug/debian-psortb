@@ -21,7 +21,8 @@ Package: psortb
 Architecture: any
 Depends: ${shlibs:Depends},
          ${perl:Depends},
-         ${misc:Depends}
+         ${misc:Depends},
+         pftools
 Description: bacterial localization prediction tool
  PSORTb enables prediction of bacterial protein subcellular localization
  (SCL) and provides a quick and inexpensive means for gaining insight
