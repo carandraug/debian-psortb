@@ -2,3 +2,4 @@ biosquid_includes.patch
 fix_hmmer_interface.patch
 fix_build_Algorithm-SVM.patch
 remove-bundled-party-libsvm.patch
+path_to_conf.patch

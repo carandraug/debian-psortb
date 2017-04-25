@@ -1,0 +1,22 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Fri, 17 Mar 2017 10:23:15 +010
+Description: Fix path to conf and other binaries
+ It is assumed that conf should not be changed by the user.
+ In case it turns out that users need to change this the files should be
+ moved to /etc/psortb
+
+--- a/psort/bin/psort
++++ b/psort/bin/psort
+@@ -59,9 +59,9 @@ MAIN: {
+   my $psort_analysis = 'psort';
+   my $psort_output = 'bayes';
+ 
+-  my $root = '/usr/local/psortb-3.0';
+-  my $blastdir = '/usr/local/bio/blast';
+-  my $pftools = '/usr/local/bin/';
++  my $root = '/usr/lib/psort';
++  my $blastdir = '/usr/bin';
++  my $pftools = '/usr/bin';
+   my $pfscan_module = 'Profile';
+ 
+   # Pull any options off of the command line.
