@@ -1,5 +1,5 @@
-psortb (3.0.4+dfsg-1) UNRELEASED; urgency=medium
+psortb (3.0.4+dfsg-1) unstable; urgency=medium
 
   * Initial release (Closes: #861081)
 
- -- Andreas Tille <tille@debian.org>  Fri, 17 Mar 2017 10:23:15 +0100
+ -- Andreas Tille <tille@debian.org>  Sun, 30 Apr 2017 07:30:26 +0200
