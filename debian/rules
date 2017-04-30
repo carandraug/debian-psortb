@@ -4,6 +4,8 @@
 
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
+DEBPKGNAME     := $(shell dpkg-parsechangelog | awk '/^Source:/ {print $$2}')
+
 %:
 	dh $@
 
@@ -16,3 +18,7 @@ override_dh_auto_clean:
 override_dh_auto_configure:
 	cp -a psort/bin/psort psort/bin/psort.debsave
 	dh_auto_configure
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x debian/$(DEBPKGNAME)/usr/lib/psort/conf/analysis/signal/archaea/check-sig
