@@ -17,6 +17,7 @@ Files-Excluded: algorithm-hmm/src/include/gki.h
                 algorithm-hmm/src/include/gsi*.h
                 bio-tools-psort-svmloc/libsvm.h
                 bio-tools-psort-svmloc/libsvm.cpp
+                */CVS/
 
 Files: *
 Copyright: 2003-2010 Nancy Y. Yu, James R. Wagner, Matthew R. Laird,
