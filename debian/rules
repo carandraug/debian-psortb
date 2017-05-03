@@ -19,6 +19,11 @@ override_dh_auto_configure:
 	cp -a psort/bin/psort psort/bin/psort.debsave
 	dh_auto_configure
 
+override_dh_auto_build:
+	# hack around the issue that configure injects wrong root dir /usr/local/psortb
+	mv psort/bin/psort.debsave psort/bin/psort
+	dh_auto_build
+
 override_dh_fixperms:
 	dh_fixperms
 	chmod +x debian/$(DEBPKGNAME)/usr/lib/psort/conf/analysis/signal/archaea/check-sig
