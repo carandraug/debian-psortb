@@ -20,3 +20,18 @@ Description: Fix path to conf and other binaries
    my $pfscan_module = 'Profile';
  
    # Pull any options off of the command line.
+--- a/psort/server/startup.pl
++++ b/psort/server/startup.pl
+@@ -8,9 +8,9 @@ use Apache ();
+ 
+ use strict;
+ 
+-my $PSORT_ROOT = "/usr/local/psort/";
+-my $BLAST_DIR  = "/path/to/BLAST/installation/";
+-my $PFTOOLS_DIR = "/path/to/PFTOOLS/installation/";
++my $PSORT_ROOT = "/usr/lib/psort";
++my $BLAST_DIR  = "/usr/bin";
++my $PFTOOLS_DIR = "/usr/bin";
+ 
+ our %ENV;
+ 
