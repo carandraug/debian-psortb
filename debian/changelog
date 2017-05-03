@@ -1,6 +1,7 @@
 psortb (3.0.4+dfsg-2) UNRELEASED; urgency=medium
 
   * Fix root dir in config file
+  * Add pftools to Build-Depends since it is checked in build process
 
  -- Andreas Tille <tille@debian.org>  Wed, 03 May 2017 14:52:46 +0200
 
